@@ -1,9 +1,15 @@
 # Ghost Space
-Open-source send/receive spatial messages
+Ghost Space — open-source send/receive spatial messages
 
 ## Content
 1. Client — Android
 2. Server — PHP and MySQL
+
+## Required hardware
+We guess that our app should work with any beacon. Actually, we've tested our app only on BKON which support all major beacon protocols.
+
+## Used stuff
+- Android Beacon Library (http://altbeacon.github.io/android-beacon-library) [Apache License 2.0]
 
 ## F.A.Q.
 ### What is it?
