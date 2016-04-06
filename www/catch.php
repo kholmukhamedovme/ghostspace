@@ -2,7 +2,7 @@
 
 	// Constants
 		define("HIT_RADIUS", 6);
-		define("DISCOVERY_RADIUS", HIT_RADIUS * 2);
+		define("CLOSE_RADIUS", HIT_RADIUS * 2);
 		define("LAST_USER_POSITIONS_QUANTITY", 9);
 
 	// MySQL
@@ -83,9 +83,9 @@
 				return false;
 		}
 
-	// Function is_discovered
-		function is_discovered ($nearest) {
-			if ($nearest["aa"] < DISCOVERY_RADIUS && $nearest["bb"] < DISCOVERY_RADIUS && $nearest["cc"] < DISCOVERY_RADIUS)
+	// Function is_close
+		function is_close ($nearest) {
+			if ($nearest["aa"] < CLOSE_RADIUS && $nearest["bb"] < CLOSE_RADIUS && $nearest["cc"] < CLOSE_RADIUS)
 				return true;
 			else
 				return false;
@@ -98,7 +98,7 @@
 
 			if (is_hit($nearest))
 				echo "0"."&".$nearest["message"];
-			elseif (is_discovered($nearest))
+			elseif (is_close($nearest))
 				echo "1"."&"."_";
 			else
 				echo "-1"."&"."_";
