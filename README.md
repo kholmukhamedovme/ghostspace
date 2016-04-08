@@ -1,5 +1,5 @@
 # Ghost Space
-Ghost Space — open-source send/receive spatial messages
+Ghost Space — open-source solution for sending/receiving spatial messages
 
 ## Content
 1. Client — Android
